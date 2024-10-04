@@ -15,6 +15,7 @@ import moment from "moment";
 import { Box, Button, Stack, Typography } from "@mui/material";
 import BlinkingText from "../../Components/BlinkingText/BlinkingText";
 import { STAKING_CTC_INFO, STAKING_FUNDER } from "@repo/voix";
+import StatsBanner from "../../Components/StatsBanner/StatsBanner";
 
 function Staking(): ReactElement {
   const { loading } = useSelector((state: RootState) => state.node);
@@ -101,6 +102,7 @@ function Staking(): ReactElement {
 
   return (
     <div className="overview-wrapper">
+      <StatsBanner />
       <div className="overview-container">
         <div className="overview-header">
           <div style={{ marginLeft: "10px" }}>Staking</div>

@@ -28,6 +28,7 @@ import "../App.scss";
 import StakingForecast from "@/Pages/StakingForecast/StakingForecast";
 import Banner from "@/Components/Banner/Banner";
 import DeadlineCountdown from "@/Components/DeadlineCountdown/DeadlineCountdown";
+import StatsBanner from "@/Components/StatsBanner/StatsBanner";
 
 function AppRouter(): ReactElement {
   const week1Deadline = new Date("2024-10-07T00:00:00"); // Replace with your Week 1 deadline date
@@ -168,9 +169,7 @@ function AppRouter(): ReactElement {
                           ></Route>
                           <Route
                             path="*"
-                            element={
-                              <Navigate to="/overview" replace />
-                            }
+                            element={<Navigate to="/overview" replace />}
                           />
                         </Routes>
                       )}
@@ -185,11 +184,15 @@ function AppRouter(): ReactElement {
                             />
                           </Routes>
                           <Typography
-                            style={{ color: 'rgba(112, 42, 226, 0.8)', fontWeight: 'bold' }}
+                            style={{
+                              color: "rgba(112, 42, 226, 0.8)",
+                              fontWeight: "bold",
+                            }}
                             variant="h6"
                             className="text-center"
                           >
-                            Connect your wallet or use the forecasting tool below!
+                            Connect your wallet or use the forecasting tool
+                            below!
                           </Typography>
                           <StakingForecast></StakingForecast>
                         </>
